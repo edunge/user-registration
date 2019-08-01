@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<h1>Welcome to Base</h1>
+<body>
+<nav class=navbar navbar-default navbar-static-top>
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-link" href="{% url 'new_website:index' %}">DJANGO</a></li>
+            <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a class="navbar-link" href="{% url 'new_website:register' %}">Register</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    {% block body_block %}
+    <!-- Anything outside of this will be inherited -->
+    {% endblock %}
+</div>
+
+</body>
+
+</html>
