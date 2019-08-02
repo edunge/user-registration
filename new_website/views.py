@@ -74,7 +74,6 @@ def user_login(request):
                 login(request,user)
                 return HttpResponseRedirect(reverse('new_website/index.html'))
 
-
             else:
                 return HttpResponse("ACCOUNT NOT ACTIVE")
         else:
@@ -84,4 +83,6 @@ def user_login(request):
         
     else:
         return render(request,'new_website/login.html')
+
+
 
