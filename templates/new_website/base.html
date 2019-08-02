@@ -15,6 +15,12 @@
             <li><a class="navbar-link" href="{% url 'new_website:index' %}">DJANGO</a></li>
             <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
             <li><a class="navbar-link" href="{% url 'new_website:register' %}">Register</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a class="navbar-link" href="{%url 'new_website:logout' %}">Logout</a></li>
+            {% else %}
+            <li><a class="navbar-link" href="{% url 'new_website:user_login' %}"></a></li>
+            {% endif %}
         </ul>
     </div>
 </nav>
