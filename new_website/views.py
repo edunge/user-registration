@@ -74,6 +74,7 @@ def user_login(request):
                 login(request,user)
                 return HttpResponseRedirect(reverse('new_website/index.html'))
 
+
             else:
                 return HttpResponse("ACCOUNT NOT ACTIVE")
         else:
