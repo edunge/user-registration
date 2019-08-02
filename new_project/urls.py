@@ -23,4 +23,6 @@ urlpatterns = [
     path('base/',include('new_website.urls')),
     path('register/',include('new_website.urls')),
     path ('login/', include('new_website.urls')),
+    path('logout/',include('new_website.urls')),
+    path('user_login/', include('new_website.urls')),
 ]
